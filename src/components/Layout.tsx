@@ -1,7 +1,8 @@
 import Link from "next/link";
-
+import Image from "next/image";
 import useWishlistState from "../hooks/useWishlistState";
 import useSnipcartCount from "../hooks/useSnipcartCount";
+import logo from '../public/logo2.png'
 
 const Layout = ({ children }) => {
   const { hasItems } = useWishlistState();
@@ -32,9 +33,20 @@ const Layout = ({ children }) => {
                 <a className="flex items-center text-gray-900">
                   <div className="rounded-full w-12 h-12 flex items-center justify-center mr-4">
                   </div>
+                  <div className="mr-4">
+                  <Image
+            src={logo}
+            width={50}
+            height={50}
+            alt={"Chess Sigma Logo"}
+            title={`Chess Sigma Logo`}
+          />
+          </div>
                   <span className="text-lg font-medium">
                   Checkmate Boutique
+                  
                   </span>
+
                 </a>
               </Link>
             </div>
@@ -75,7 +87,7 @@ const Layout = ({ children }) => {
                 aria-label="Cart"
               >
                 {cartHasItems && (
-                  <span className="absolute bg-blue-600 rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></span>
+                  <span className="absolute bg-sigma-blue rounded-full w-2 h-2 top-0 right-0 -mt-1 -mr-1"></span>
                 )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

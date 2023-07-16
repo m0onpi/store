@@ -8,7 +8,7 @@ type HeroProps = {
 };
 
 const Hero: React.FC<HeroProps> = ({ product }) => (
-  <div className="bg-gray-50 p-6 md:p-12">
+  <div className="bg-sigma-blue p-6 md:p-12">
     <div className="flex items-center">
       <div className="flex items-center justify-center flex-1 sm:flex-shrink-0 md:w-1/3 p-6">
         image

@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      colors: {
+        'sigma-blue' :'#1BABA5'
+      },
     },
   },
   variants: {
