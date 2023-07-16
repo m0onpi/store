@@ -31,9 +31,6 @@ const Layout = ({ children }) => {
               <Link href="/">
                 <a className="flex items-center text-gray-900">
                   <div className="rounded-full w-12 h-12 flex items-center justify-center mr-4">
-                    <img>
-
-                    </img>
                   </div>
                   <span className="text-lg font-medium">
                   Checkmate Boutique
