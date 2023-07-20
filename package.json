@@ -10,6 +10,7 @@
   "author": "Jamie Barton <jamie@notrab.dev> (https://notrab.dev)",
   "dependencies": {
     "@tailwindcss/forms": "0.5.3",
+    "@vercel/analytics": "^1.0.1",
     "classcat": "5.0.4",
     "install": "^0.13.0",
     "lodash.shuffle": "4.2.0",
