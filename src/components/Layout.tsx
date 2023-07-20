@@ -122,7 +122,6 @@ const Layout = ({ children }) => {
             </a>
             , Built by{" "}
             <a
-              href="https://twitter.com/notrab"
               title="Follow the creator on Twitter"
               target="_blank"
               rel="noopener noreferrer"
