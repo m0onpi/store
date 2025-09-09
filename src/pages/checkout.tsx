@@ -48,67 +48,28 @@ const CheckoutPage: React.FC = () => {
     e.preventDefault();
     setIsProcessing(true);
 
-    try {
-      // Generate order number
-      const orderNumber = `ORD-${Date.now()}`;
-      
-      // Prepare order data for database
-      const orderData = {
-        orderId: orderNumber,
-        items: state.items,
-        total: state.total,
-        shipping: {
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          address: formData.address,
-          city: formData.city,
-          state: formData.state,
-          zipCode: formData.zipCode,
-          country: formData.country,
-        },
-        payment: {
-          cardNumber: formData.cardNumber,
-          expiryDate: formData.expiryDate,
-          cvv: formData.cvv,
-          nameOnCard: formData.nameOnCard,
-        },
-        timestamp: new Date().toISOString(),
-      };
-      
-      // Save order to database
-      const response = await fetch('/api/orders/create', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(orderData),
-      });
+    // Simulate processing time
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-      if (!response.ok) {
-        throw new Error('Failed to save order');
-      }
-
-      // Also store in localStorage as backup
-      localStorage.setItem('lastOrder', JSON.stringify({
-        orderNumber,
-        items: state.items,
-        total: state.total,
-        customer: formData,
-        orderDate: new Date().toISOString(),
-      }));
-      
-      // Clear cart
-      dispatch({ type: 'CLEAR_CART' });
-      
-      // Redirect to confirmation
-      router.push(`/confirmation?order=${orderNumber}`);
-      
-    } catch (error) {
-      console.error('Error processing order:', error);
-      alert('There was an error processing your order. Please try again.');
-    } finally {
-      setIsProcessing(false);
-    }
+    // Generate order number
+    const orderNumber = `ORD-${Date.now()}`;
+    
+    // Store order data in localStorage for confirmation page
+    const orderData = {
+      orderNumber,
+      items: state.items,
+      total: state.total,
+      customer: formData,
+      orderDate: new Date().toISOString(),
+    };
+    
+    localStorage.setItem('lastOrder', JSON.stringify(orderData));
+    
+    // Clear cart
+    dispatch({ type: 'CLEAR_CART' });
+    
+    // Redirect to confirmation
+    router.push(`/confirmation?order=${orderNumber}`);
   };
 
   if (state.items.length === 0) {

@@ -36,51 +36,6 @@ const ConfirmationPage: React.FC = () => {
     const orderNumber = router.query.order as string;
     
     if (orderNumber) {
-      // First try to fetch from database
-      fetchOrderFromDatabase(orderNumber);
-    } else {
-      setLoading(false);
-    }
-  }, [router.query.order]);
-
-  const fetchOrderFromDatabase = async (orderNumber: string) => {
-    try {
-      const response = await fetch(`/api/orders/${orderNumber}`);
-      const result = await response.json();
-      
-      if (result.success && result.order) {
-        // Convert database order format to confirmation page format
-        const orderData: OrderData = {
-          orderNumber: result.order.orderId,
-          items: result.order.items,
-          total: result.order.total,
-          customer: {
-            firstName: result.order.shipping.firstName,
-            lastName: result.order.shipping.lastName,
-            email: '', // Not stored in current format
-            phone: '', // Not stored in current format
-            address: result.order.shipping.address,
-            city: result.order.shipping.city,
-            state: result.order.shipping.state,
-            zipCode: result.order.shipping.zipCode,
-            country: result.order.shipping.country,
-          },
-          orderDate: result.order.timestamp,
-        };
-        setOrderData(orderData);
-      } else {
-        // Fallback to localStorage if database fetch fails
-        const storedOrder = localStorage.getItem('lastOrder');
-        if (storedOrder) {
-          const parsedOrder = JSON.parse(storedOrder);
-          if (parsedOrder.orderNumber === orderNumber) {
-            setOrderData(parsedOrder);
-          }
-        }
-      }
-    } catch (error) {
-      console.error('Error fetching order from database:', error);
-      // Fallback to localStorage
       const storedOrder = localStorage.getItem('lastOrder');
       if (storedOrder) {
         const parsedOrder = JSON.parse(storedOrder);
@@ -88,10 +43,10 @@ const ConfirmationPage: React.FC = () => {
           setOrderData(parsedOrder);
         }
       }
-    } finally {
-      setLoading(false);
     }
-  };
+    
+    setLoading(false);
+  }, [router.query.order]);
 
   if (loading) {
     return (
