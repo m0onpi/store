@@ -2,8 +2,7 @@ import * as React from "react";
 import { GetStaticProps } from "next";
 import shuffle from "lodash.shuffle";
 
-import { printful } from "../lib/printful-client";
-import { formatVariantName } from "../lib/format-variant-name";
+import { testFurnitureProducts } from "../data/test-products";
 import { PrintfulProduct } from "../types";
 
 import ProductGrid from "../components/ProductGrid";
@@ -16,8 +15,11 @@ const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
   <>
     <div className="text-center pb-6 md:pb-12">
       <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">
-        All Products
+        Premium Furniture Collection
       </h1>
+      <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Discover our curated selection of modern furniture pieces designed to transform your living space.
+      </p>
     </div>
 
     <ProductGrid products={products} />
@@ -25,21 +27,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
 );
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { result: productIds } = await printful.get("sync/products");
-
-  const allProducts = await Promise.all(
-    productIds.map(async ({ id }) => await printful.get(`sync/products/${id}`))
-  );
-
-  const products: PrintfulProduct[] = allProducts.map(
-    ({ result: { sync_product, sync_variants } }) => ({
-      ...sync_product,
-      variants: sync_variants.map(({ name, ...variant }) => ({
-        name: formatVariantName(name),
-        ...variant,
-      })),
-    })
-  );
+  // Use test furniture products for development/testing
+  const products: PrintfulProduct[] = testFurnitureProducts;
 
   return {
     props: {

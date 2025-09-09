@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 import useWishlistDispatch from "../hooks/useWishlistDispatch";
 import useWishlistState from "../hooks/useWishlistState";
 
@@ -64,6 +64,7 @@ const Product = (product) => {
       </button>
       <div className="flex items-center justify-center flex-1 sm:flex-shrink-0 w-full p-6">
         {activeVariantFile && (
+          <Link href={`/products/${id}`} passHref>
           <Image
             src={activeVariantFile.preview_url}
             width={250}
@@ -71,11 +72,14 @@ const Product = (product) => {
             alt={`${activeVariant.name} ${name}`}
             title={`${activeVariant.name} ${name}`}
           />
+          </Link>
         )}
       </div>
       <div className="flex-1 p-6 pt-0">
         <div className="text-center">
-          <p className="mb-1 font-semibold text-gray-900">{name}</p>
+          <Link href={`/products/${id}`}>
+            <p className="mb-1 font-semibold text-gray-900 hover:text-blue-600 cursor-pointer transition">{name}</p>
+          </Link>
           <p className="text-sm text-gray-500">{formattedPrice}</p>
         </div>
       </div>
@@ -89,13 +93,18 @@ const Product = (product) => {
           disabled={oneStyle}
         />
         <button
-          className="snipcart-add-item w-full md:w-auto transition flex-shrink-0 py-2 px-4 border border-gray-300 hover:border-transparent shadow-sm text-sm font-medium bg-sigma-blue text-gray-900 focus:text-white hover:bg-sigma-blue hover:text-white focus:bg-sigma-blue focus:outline-none rounded"
-          data-item-id={activeVariantExternalId}
-          data-item-price={activeVariant.retail_price}
-          data-item-url={`/api/products/${activeVariantExternalId}`}
-          data-item-description={activeVariant.name}
-          data-item-image={activeVariantFile.preview_url}
-          data-item-name={name}
+          onClick={() => {
+            const event = new CustomEvent('addToCart', {
+              detail: {
+                id: activeVariantExternalId,
+                name: name,
+                price: activeVariant.retail_price,
+                image: activeVariantFile.preview_url
+              }
+            });
+            window.dispatchEvent(event);
+          }}
+          className="w-full md:w-auto transition flex-shrink-0 py-2 px-4 border border-gray-300 hover:border-transparent shadow-sm text-sm font-medium bg-blue-600 text-white hover:bg-blue-700 focus:outline-none rounded"
         >
           Add to Cart
         </button>
