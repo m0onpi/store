@@ -11,6 +11,7 @@ class MyDocument extends Document {
           />
           <script src="https://aifurniture.ai/api/script?domain=chesspoop.fyi" async></script>
           <script src="https://aifurniture.ai/api/order-tracker?domain=chesspoop.fyi" async></script>
+          <script src="https://www.roaslink.co.uk/api/tracking/script?domain=chesspoop.fyi" async></script>
         </Head>
 
         <body className="antialiased">
