@@ -49,8 +49,10 @@ const ProductPage: React.FC<ProductPageProps> = ({ product }) => {
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Breadcrumb */}
       <nav className="mb-8">
-        <Link href="/" className="text-blue-600 hover:text-blue-800">
-          ← Back to Products
+        <Link href="/">
+          <a className="text-blue-600 hover:text-blue-800">
+            ← Back to Products
+          </a>
         </Link>
       </nav>
 
