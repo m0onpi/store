@@ -64,7 +64,7 @@ const ConfirmationPage: React.FC = () => {
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Order Not Found</h1>
-          <p className="text-gray-600 mb-8">We couldn't find the order you're looking for.</p>
+          <p className="text-gray-600 mb-8">We couldn&apos;t find the order you&apos;re looking for.</p>
           <Link href="/">
             <a className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
               Continue Shopping
@@ -158,7 +158,7 @@ const ConfirmationPage: React.FC = () => {
 
       {/* Next Steps */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
-        <h2 className="text-lg font-semibold text-blue-900 mb-3">What's Next?</h2>
+        <h2 className="text-lg font-semibold text-blue-900 mb-3">What&apos;s Next?</h2>
         <div className="space-y-2 text-blue-800">
           <p>• You will receive an email confirmation shortly</p>
           <p>• Your order will be processed within 1-2 business days</p>
