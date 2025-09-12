@@ -9,9 +9,9 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          <script src="https://aifurniture.ai/api/script?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.ai/api/order-tracker?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.ai/api/tracking/script?domain=chesspoop.fyi" async></script>
+          <script src="https://aifurniture.app/api/script?domain=chesspoop.fyi" async></script>
+          <script src="https://aifurniture.app/api/order-tracker?domain=chesspoop.fyi" async></script>
+          <script src="https://aifurniture.app/api/tracking/script?domain=chesspoop.fyi" async></script>
         </Head>
 
         <body className="antialiased">
