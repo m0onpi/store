@@ -26,7 +26,7 @@ function AboutPage() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h4 className="text-xl font-semibold mb-2">Style & Comfort</h4>
-            <p className="text-gray-600">Beautiful designs that don't compromise on comfort and functionality.</p>
+            <p className="text-gray-600">Beautiful designs that don&apos;t compromise on comfort and functionality.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h4 className="text-xl font-semibold mb-2">Customer Satisfaction</h4>
