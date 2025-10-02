@@ -1,31 +1,41 @@
-function TermsPage() {
+function AboutPage() {
   return (
-    <div className="max-w-xl mx-auto prose prose-blue">
-      <h2>Welcome</h2>
-      <p>
-        You&apos;re viewing the{" "}
-        <a
-          href="https://nextjs-portfolio-b1gb5rww2-m0onpi.vercel.app/"
-          title="Learn more about me"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Checkmate Boutique
-        </a>{" "}
-      </p>
-      <p>
-      Welcome to the Checkmate Boutique, your one-stop shop for all things chess. We understand the profound passion and dedication that players have for the royal game, and we&apos;ve channelled that same devotion into curating an exceptional collection of chess-themed attire and accessories.
-
-In our store, you&apos;ll find a comprehensive range of fashion that allows you to display your love for chess in your everyday life. From chic T-shirts featuring intricate designs of your favorite openings, to hoodies that showcase famous positions from historic games, our attire merges style and your chess enthusiasm flawlessly.
-
-But it doesn&apos;t end with clothing. Our selection of accessories includes everything you might imagine. Enrich your game experience with our artisanal chess boards and finely crafted pieces, or carry your chess pride with our themed bags, jewelry, and more. We even offer stylish chess clocks and score notebooks to support your tournament life!
-
-At Checkmate Boutique, quality is paramount. Every item in our collection is designed with attention to detail and made from the best materials, ensuring you receive only the finest products. Whether you are a grandmaster, a club player, a chess enthusiast, or looking for a gift for one, Checkmate Boutique is the chess store that caters to all your chess-related needs.
-
-Join us in celebrating the beauty of chess with our fashion-forward, high-quality attire and accessories. After all, in the game of life, we believe in playing with style!
-      </p>
+    <div className="bg-gray-50 p-8 md:p-16">
+      <div className="max-w-4xl mx-auto prose prose-blue text-center">
+        <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900">About Our Furniture Store</h2>
+        <p className="text-lg text-gray-600 mt-4">
+          Welcome to Premium Furniture, where we specialize in bringing you the finest selection of high-quality furniture for your home and office. We believe that great furniture should combine exceptional craftsmanship, timeless design, and lasting comfort.
+        </p>
+        <p className="text-lg text-gray-600 mt-2">
+          Our curated collection features carefully selected pieces from trusted manufacturers, ensuring that every item meets our high standards for quality and style. From modern sofas to elegant dining chairs and comfortable armchairs, we have everything you need to transform your living spaces.
+        </p>
+        <h3 className="text-3xl font-semibold mt-6">Why Choose Our Furniture?</h3>
+        <ul className="list-disc pl-5 mt-4 text-left max-w-2xl mx-auto">
+          <li>Premium materials and construction for lasting durability</li>
+          <li>Contemporary designs that complement any decor style</li>
+          <li>Comfort-focused engineering for everyday use</li>
+          <li>Competitive pricing with exceptional value</li>
+          <li>Expert customer service and support</li>
+          <li>Free delivery on orders over $500</li>
+        </ul>
+        
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h4 className="text-xl font-semibold mb-2">Quality First</h4>
+            <p className="text-gray-600">Every piece is inspected for quality and durability before reaching your home.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h4 className="text-xl font-semibold mb-2">Style & Comfort</h4>
+            <p className="text-gray-600">Beautiful designs that don't compromise on comfort and functionality.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h4 className="text-xl font-semibold mb-2">Customer Satisfaction</h4>
+            <p className="text-gray-600">We stand behind our products with comprehensive warranties and support.</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default TermsPage;
+export default AboutPage;

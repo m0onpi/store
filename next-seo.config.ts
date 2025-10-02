@@ -1,11 +1,11 @@
 const description =
-  "Check out our Chess Store !";
-const title = "Chess Sigma";
-const url = "https://swag.nextdropshippingstarter.com";
+  "Enhance your chess skills with personalized coaching!";
+const title = "Chess Coaching Academy";
+const url = "https://your-coaching-website.com";
 
 const seo = {
   title,
-  titleTemplate: "Chess Sigma",
+  titleTemplate: "Chess Coaching Academy",
   description,
   openGraph: {
     description,
