@@ -5,6 +5,7 @@ import Layout from "../components/Hero";
 import ProductCard from "../components/ProductCard";
 import { furnitureProducts } from "../data/products";
 
+<<<<<<< HEAD
 const IndexPage: React.FC = () => (
   <Layout>
     <div className="bg-white">
@@ -22,6 +23,10 @@ const IndexPage: React.FC = () => (
           </a>
         </div>
       </div>
+=======
+import { testFurnitureProducts } from "../data/test-products";
+import { PrintfulProduct } from "../types";
+>>>>>>> c24e4893f1b511e7d570e1ea221e2ba54965abaf
 
       {/* Products Section */}
       <div id="products" className="py-16 md:py-24 bg-gray-50">
@@ -43,6 +48,7 @@ const IndexPage: React.FC = () => (
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <div className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -79,8 +85,34 @@ const IndexPage: React.FC = () => (
           </div>
         </div>
       </div>
+=======
+const IndexPage: React.FC<IndexPageProps> = ({ products }) => (
+  <>
+    <div className="text-center pb-6 md:pb-12">
+      <h1 className="text-xl md:text-3xl lg:text-5xl font-bold">
+        Premium Furniture Collection
+      </h1>
+      <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Discover our curated selection of modern furniture pieces designed to transform your living space.
+      </p>
+>>>>>>> c24e4893f1b511e7d570e1ea221e2ba54965abaf
     </div>
   </Layout>
 );
 
+<<<<<<< HEAD
 export default IndexPage;
+=======
+export const getStaticProps: GetStaticProps = async () => {
+  // Use test furniture products for development/testing
+  const products: PrintfulProduct[] = testFurnitureProducts;
+
+  return {
+    props: {
+      products: shuffle(products),
+    },
+  };
+};
+
+export default IndexPage;
+>>>>>>> c24e4893f1b511e7d570e1ea221e2ba54965abaf
