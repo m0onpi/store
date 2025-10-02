@@ -24,8 +24,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <Image
           src={product.images[currentImageIndex]}
           alt={`${product.name} - Image ${currentImageIndex + 1}`}
-          fill
-          className="object-cover"
+          width={400}
+          height={256}
+          className="object-cover w-full h-full"
         />
         
         {/* Navigation arrows */}
