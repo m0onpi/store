@@ -40,9 +40,9 @@ export const furnitureProducts: Product[] = [
     description: "Contemporary dining chairs that blend modern aesthetics with exceptional comfort. These chairs feature ergonomic design and premium materials, perfect for any dining space.",
     price: 599.99,
     images: [
-      "https://www.my-furniture.com/media/catalog/product/cache/cc368a6b8cc4f25274cea070f9183754/m/a/madison-dining-chair-cutout-1-web.jpg",
-      "https://www.my-furniture.com/media/catalog/product/cache/cc368a6b8cc4f25274cea070f9183754/m/a/madison-dining-chair-cutout-2-web.jpg",
-      "https://www.my-furniture.com/media/catalog/product/cache/cc368a6b8cc4f25274cea070f9183754/m/a/madison-dining-chair-detail-1-web.jpg",
+      "/chair1.jpg",
+      "/chair2.jpg",
+      "/chair3.jpg",
     ],
     category: "Dining Chairs",
     features: [
