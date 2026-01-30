@@ -12,7 +12,7 @@ class MyDocument extends Document {
           <script src="https://aifurniture.app/api/script?domain=chesspoop.fyi" async></script>
           <script src="https://aifurniture.app/api/order-tracker?domain=chesspoop.fyi" async></script>
           <script src="https://aifurniture.app/api/tracking/script?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.app/api/chatbot-script?domain={{ shop.domain }}" async></script>
+          <script src="https://aifurniture.app/api/chatbot-script?domain=chesspoop.fyi" async></script>
         </Head>
 
         <body className="antialiased">
