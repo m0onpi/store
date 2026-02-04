@@ -26,7 +26,7 @@ class MyDocument extends Document {
       `,
     }}
   />
-  <script src="https://furniture-ai.com/widget/widget.js" async />
+  <script src="https://furniture-ai.com/build/assets/app-Bmj8Bg0C.js" async />
   {/* ↑ Add async here */}
         </body>
       </Html>
