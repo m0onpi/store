@@ -16,17 +16,18 @@ class MyDocument extends Document {
           
           <Main />
           <NextScript />
-          <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.FURNITURE_AI_CONFIG = {
-                domain: 'chesspoop.fyi',
-                domainId: 'cml7xscbm0007zyafq8hv4s4p'
-              };
-            `,
-          }}
-        />
-        <script src="https://furniture-ai.com/widget/widget.js" />
+            <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.FURNITURE_AI_CONFIG = {
+          domain: 'chesspoop.fyi',
+          domainId: 'cml7xscbm0007zyafq8hv4s4p'
+        };
+      `,
+    }}
+  />
+  <script src="https://furniture-ai.com/widget/widget.js" async />
+  {/* ↑ Add async here */}
         </body>
       </Html>
     );
