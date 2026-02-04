@@ -9,16 +9,24 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
-          <script src="https://aifurniture.app/api/script?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.app/api/order-tracker?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.app/api/tracking/script?domain=chesspoop.fyi" async></script>
-          <script src="https://aifurniture.app/api/chatbot-script?domain=chesspoop.fyi" async></script>
+
         </Head>
 
         <body className="antialiased">
           
           <Main />
           <NextScript />
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.FURNITURE_AI_CONFIG = {
+                domain: 'chesspoop.fyi',
+                domainId: 'cml7xscbm0007zyafq8hv4s4p'
+              };
+            `,
+          }}
+        />
+        <script src="https://furniture-ai.com/widget/widget.js" />
         </body>
       </Html>
     );
