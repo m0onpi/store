@@ -26,8 +26,8 @@ class MyDocument extends Document {
               };
             `,
           }}
-        />
-        <script src="https://furniture-ai.com/build/assets/app-Bmj8Bg0C.js" async />
+        />g
+        <script src="https://furniture-ai.com/build/assets/app-BLb6Ezgx.js" async />
         <script
           dangerouslySetInnerHTML={{
             __html: `
