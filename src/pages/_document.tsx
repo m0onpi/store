@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-
+import Script from "next/script";
 class MyDocument extends Document {
   render() {
     return (
@@ -16,16 +16,10 @@ class MyDocument extends Document {
           
           <Main />
           
-<script>
-(function(){
-  window['FURNITURE_AI_CONFIG']={domain:'chesspoop.fyi',domainId:'cml7xscbm0007zyafq8hv4s4p'};
-  var s=document.createElement('script');
-  s.src='https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/dist/widget.js';
-  s.async=1;
-  s.onload=function(){var w=window['AIFurnitureWidget'];if(w&&w.initAIFurnitureWidget)w.initAIFurnitureWidget(window['FURNITURE_AI_CONFIG']);};
-  document.head.appendChild(s);
-})();
-</script>        </body>
+<Script
+  src="https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/embed.js?domain=chesspoop.fyi&domainId=cml7xscbm0007zyafq8hv4s4p"
+  strategy="afterInteractive"
+/>        </body>
       </Html>
     );
   }
