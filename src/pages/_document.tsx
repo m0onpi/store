@@ -15,8 +15,7 @@ class MyDocument extends Document {
         <body className="antialiased">
           
           <Main />
-        <script src="https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/embed.js?domain=mirage-furniture.myshopify.com&domainId=cmlo70t2k0001s8ychvp7yk6j" async></script>
-        </body>
+<script src="https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/embed.js?domain=chesspoop.fyi&domainId=cml7xscbm0007zyafq8hv4s4p" async></script>        </body>
       </Html>
     );
   }
