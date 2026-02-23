@@ -15,31 +15,17 @@ class MyDocument extends Document {
         <body className="antialiased">
           
           <Main />
-          <NextScript />
-{/* Widget - works in all Next.js versions */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.FURNITURE_AI_CONFIG = {
-                domain: 'chesspoop.fyi',
-                domainId: 'cml7xscbm0007zyafq8hv4s4p'
-              };
-            `,
-          }}
-        />g
-        <script src="https://furniture-ai.com/build/assets/app-BLb6Ezgx.js" async />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.addEventListener('load', function() {
-                if (window.initAIFurnitureWidget) {
-                  window.initAIFurnitureWidget(window.FURNITURE_AI_CONFIG);
-                }
-              });
-            `,
-          }}
-        />
-        </body>
+          
+<script>
+(function(){
+  window['FURNITURE_AI_CONFIG']={domain:'chesspoop.fyi',domainId:'cml7xscbm0007zyafq8hv4s4p'};
+  var s=document.createElement('script');
+  s.src='https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/dist/widget.js';
+  s.async=1;
+  s.onload=function(){var w=window['AIFurnitureWidget'];if(w&&w.initAIFurnitureWidget)w.initAIFurnitureWidget(window['FURNITURE_AI_CONFIG']);};
+  document.head.appendChild(s);
+})();
+</script>        </body>
       </Html>
     );
   }
