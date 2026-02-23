@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
+
 class MyDocument extends Document {
   render() {
     return (
@@ -15,11 +15,8 @@ class MyDocument extends Document {
         <body className="antialiased">
           
           <Main />
-          
-<Script
-  src="https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/embed.js?domain=chesspoop.fyi&domainId=cml7xscbm0007zyafq8hv4s4p"
-  strategy="afterInteractive"
-/>        </body>
+        <script src="https://cdn.jsdelivr.net/gh/aifurniture/ai-furniture-widget@main/embed.js?domain=mirage-furniture.myshopify.com&domainId=cmlo70t2k0001s8ychvp7yk6j" async></script>
+        </body>
       </Html>
     );
   }
